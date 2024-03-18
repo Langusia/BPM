@@ -21,11 +21,6 @@ public class BpmProcessGraphConfigurator<TProcess> where TProcess : Aggregate
     }
 }
 
-public record NodeConfig
-{
-    public int PermittedCommandTryCount { get; set; }
-}
-
 public static class BpmProcessGraphConfiguratorExtensions
 {
     public static INode<TProcess, TCommand> SetConfig<TProcess, TCommand>(

@@ -5,6 +5,7 @@ namespace Core.BPM;
 public class Aggregate : IAggregate
 {
     public Guid Id { get; set; }
+    
 
     public int Version { get; protected set; }
 

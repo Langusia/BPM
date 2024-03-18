@@ -71,6 +71,7 @@ public class PasswordRecoveryDefinition : BpmProcessGraphDefinition<PasswordReco
     {
         configure
             .StartWith<InitiatePasswordRecovery>()
+            .SetConfig(x=>x.CommandTryCount = 3)
             .ContinueWith<GenerateOtp>(g => g
                 .ContinueWith<ValidateOtp>(v => v
                     .ContinueWith<ValidateSecurityQuestion>()

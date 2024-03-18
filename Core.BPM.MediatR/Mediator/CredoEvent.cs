@@ -18,4 +18,6 @@ public record CredoEvent
     }
 
     public Type CommandType { get; init; }
+
+    public int CommandTryCount { get; init; }
 }
